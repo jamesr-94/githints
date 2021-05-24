@@ -1,0 +1,60 @@
+
+
+#handy git commands
+
+git init  //create local git repo in current directory
+git clone <url> //clone an existing directory via URL
+git clone <url> <name>
+
+git fetch origin <branch> //fetches code from the remote repository, without merging
+
+git pull 
+git pull origin <branch> //fetches code from remote and merges changes with local
+
+git branch <branch> //create a new branch off the current state
+
+git checkout <branch> path/to/file  //pull single file from another branch
+git checkout <commit> path/to/file  //revert single file to previous commit
+git checkout -b <branch> //create a new branch and check it out
+
+git add --all //stage all changes including modifications, deletions
+git add . // (git 1.x)stage all new files + modifications
+git add --ignore-removal . // (git 2.x)stage all new files + modifications
+git add -update //stage modifications + deletions
+
+git rm <file>  //removes file and stages the removal
+git rm --cached <file>  //removes file from staging area without removing from disk
+
+git mv <source> <target> //move (or rename) a file and have the modification tracked (equivalent to git rm + git add)
+
+git commit -m "commit message here" //commit staged files with message
+git commit -a -m "commit message here" //automatically stage files and commit with message
+git commit --amend  //revise the most recent commit message that hasnt yet been pushed
+
+git push origin HEAD //push to current branch
+
+
+//Undoing and Reverting
+
+git checkout <commit> -- <file>  //pull file into working dir from amother commit 
+git checkout <commit>^ -- <file>  //pull file into working dir from the previous commit (^) to the specified commit
+
+
+
+git tag -a tagName //add a tag
+git tag -d tagName //delete a tag
+git tag tagName <commit> //add a tag to another commit
+
+
+git stash
+git stash branch <branch> //create a new branch with the stashed changes
+
+git diff //shows changed files that havent been staged
+git diff --staged  //shows changed files that have been staged
+
+git log  //full log of changes in reverse chronological order
+git log -2  //most recent 2 entries in log
+git log --patch  //shows the diff introduced by each commit
+git log --pretty=oneline //pretty prints the log in one line
+git log --pretty=format:"%h - %an, %ar : %s" //pretty print the log with hash, author name, author date, subject (for more options see: http://book.git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History#pretty_format)
+git log -- <file>  //limit the log output to show commits that changed the specified file
