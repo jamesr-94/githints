@@ -2,7 +2,8 @@
 layout: home
 title: "Getting started"
 ---
-
+1.
+{:toc}
 
 Getting started
 ---------------
