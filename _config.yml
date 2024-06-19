@@ -14,12 +14,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Git Hints
-email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   A collection of useful git commands to copy/paste when you need to do 
   something quickly that isn't in your regular wheelhouse
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jamesr-94.github.io/githints" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 

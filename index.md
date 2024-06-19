@@ -2,12 +2,9 @@
 layout: home
 title: "Getting started"
 ---
-1.
-{:toc}
 
 Getting started
 ---------------
-{: .-three-column}
 
 ##### Create a git repo in current directory
 ```git init <repoName>```
